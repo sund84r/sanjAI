@@ -8,7 +8,7 @@ def home():
     return render_template("index.html")
 
 @app.route("/chat", methods=["POST"])
-def chat():
+def chat(): #hello
     data = request.get_json(silent=True) or {}
     user_message = (data.get("message") or "").strip()
 
